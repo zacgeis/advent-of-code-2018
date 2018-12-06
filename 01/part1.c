@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
   FILE* file = fopen(argv[1], "r");
   char line_buffer[LINE_BUFFER];
   int answer = 0;
-  while (fgets(line_buffer, sizeof(line_buffer), file) != NULL) {
+  while (fgets(line_buffer, LINE_BUFFER, file) != NULL) {
     char sign;
     int num;
     sscanf(line_buffer, "%c%d%*c", &sign, &num);

@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
   int threes = 0;
   FILE* file = fopen(argv[1], "r");
   char line_buffer[LINE_BUFFER];
-  while (fgets(line_buffer, sizeof(line_buffer), file) != NULL) {
+  while (fgets(line_buffer, LINE_BUFFER, file) != NULL) {
     int unique_count[CHARS] = { 0 };
     int i = 0;
     while (i < LINE_BUFFER && line_buffer[i] != '\0') {

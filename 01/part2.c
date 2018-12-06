@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
   char line_buffer[LINE_BUFFER];
   int current = 0;
   while (1) {
-    if (fgets(line_buffer, sizeof(line_buffer), file) == NULL) {
+    if (fgets(line_buffer, LINE_BUFFER, file) == NULL) {
       rewind(file);
       continue;
     }
