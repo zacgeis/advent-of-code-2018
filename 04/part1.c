@@ -41,6 +41,7 @@ typedef struct {
   duration_t durations[DURATION_COUNT];
 } guard_t;
 
+// Smaller inputs are always easier to debug. Start simple.
 void events_swap(event_t* events, int i, int j) {
   event_t temp = events[i];
   events[i] = events[j];
